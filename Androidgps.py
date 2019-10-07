@@ -6,7 +6,7 @@ droid = androidhelper.Android()
 
 port=12345
 s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-s.connect(("10.201.19.201",port)) #connecting to pi as client
+s.connect(("192.168.1.100",port)) #connecting to pi as client
 droid.makeToast("Starting location fetch") #notify me
 while True:
 	location = droid.getLastKnownLocation().result
